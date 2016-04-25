@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
         <meta charset="utf-8" />
-        <title>SkoGround</title>
+        <title>Debugging of CPython processes with gdb</title>
         <link rel="stylesheet" href="https://skoval00.github.io/theme/css/main.css" />
 
         <!--[if IE]>
@@ -14,14 +14,19 @@
         <header id="banner" class="body">
                 <h1><a href="https://skoval00.github.io/">SkoGround </a></h1>
                 <nav><ul>
-                    <li><a href="https://skoval00.github.io/category/engineering.html">engineering</a></li>
+                    <li class="active"><a href="https://skoval00.github.io/category/engineering.html">engineering</a></li>
                     <li><a href="https://skoval00.github.io/category/unix.html">unix</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="https://skoval00.github.io/debugging-of-cpython-processes-with-gdb.html" rel="bookmark"
+           title="Permalink to Debugging of CPython processes with gdb">Debugging of CPython processes with gdb</a></h1>
+    </header>
 
-            <aside id="featured" class="body">
-                <article>
-                    <h1 class="entry-title"><a href="https://skoval00.github.io/debugging-of-cpython-processes-with-gdb.html">Debugging of CPython processes with gdb</a></h1>
+    <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2016-04-25T00:00:00+03:00">
                 Published: Mon 25 April 2016
@@ -32,7 +37,7 @@
         </address>
 <p>In <a href="https://skoval00.github.io/category/engineering.html">engineering</a>.</p>
 
-</footer><!-- /.post-info --><p>Key points from <a href="http://podoliaka.org/2016/04/10/debugging-cpython-gdb/">post</a> by Roman Podoliaka</p>
+</footer><!-- /.post-info -->      <p>Key points from <a href="http://podoliaka.org/2016/04/10/debugging-cpython-gdb/">post</a> by Roman Podoliaka</p>
 <h2>Prerequisites</h2>
 <p>Install gdb and debugging symbols for CPython</p>
 <div class="highlight"><pre><span></span>apt-get install gdb python-gdb
@@ -53,36 +58,11 @@
 <p>Find out what exact line of the application code is currently being executed.</p>
 <p><code>py-locals</code></p>
 <p>Look at local variables and their values.</p>
-<p>Refer to the <a href="https://docs.python.org/devguide/gdb.html">debugging guide</a> for complete list of available commands.</p>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
+<p>Refer to the <a href="https://docs.python.org/devguide/gdb.html">debugging guide</a> for complete list of available commands.</p>
+    </div><!-- /.entry-content -->
 
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="https://skoval00.github.io/update-alternatives-in-ubuntu.html" rel="bookmark"
-                           title="Permalink to Update alternatives in Ubuntu">Update alternatives in Ubuntu</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2015-12-23T04:38:00+03:00">
-                Published: Wed 23 December 2015
-        </abbr>
-
-        <address class="vcard author">
-                By                         <a class="url fn" href="https://skoval00.github.io/author/skoval00.html">skoval00</a>
-        </address>
-<p>In <a href="https://skoval00.github.io/category/unix.html">unix</a>.</p>
-
-</footer><!-- /.post-info -->                <p>It is possible for several programs  fulfilling  the  same  or  similar functions  to  be  installed  on a single system at the same time.  For example, many systems have several  text  editors  installed  at  once.  This gives choice to the users of a system, allowing each to use a different editor ...</p>
-                <a class="readmore" href="https://skoval00.github.io/update-alternatives-in-ubuntu.html">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
-                </ol><!-- /#posts-list -->
-                </section><!-- /#content -->
+  </article>
+</section>
         <section id="extras" class="body">
                 <div class="blogroll">
                         <h2>blogroll</h2>
