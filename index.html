@@ -14,15 +14,68 @@
         <header id="banner" class="body">
                 <h1><a href="https://skoval00.github.io/">SkoGround </a></h1>
                 <nav><ul>
-                    <li><a href="https://skoval00.github.io/category/engineering.html">engineering</a></li>
-                    <li><a href="https://skoval00.github.io/category/python.html">python</a></li>
-                    <li><a href="https://skoval00.github.io/category/unix.html">unix</a></li>
+                    <li><a href="https://skoval00.github.io/category/howto.html">howto</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="https://skoval00.github.io/python-utilities.html">Python Utilities</a></h1>
+                    <h1 class="entry-title"><a href="https://skoval00.github.io/install-python-packages-from-github.html">Install Python packages from Github</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2016-06-25T07:24:00+03:00">
+                Published: Sat 25 June 2016
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="https://skoval00.github.io/author/skoval00.html">skoval00</a>
+        </address>
+<p>In <a href="https://skoval00.github.io/category/howto.html">howto</a>.</p>
+
+</footer><!-- /.post-info --><p>Taken from <a href="https://pip.pypa.io/en/latest/reference/pip_install/#vcs-support">pip documentation</a>.</p>
+<p>pip supports installing from Git, Mercurial, Subversion and Bazaar, and detects the type of VCS using url prefixes: "git+", "hg+", "bzr+", "svn+".</p>
+<h2>Git</h2>
+<p>Here are the supported forms:</p>
+<div class="highlight"><pre><span></span>[-e] git+https://github.com/MyAccount/MyProject#egg=MyProject
+[-e] git+git://git.myproject.org/MyProject#egg=MyProject
+[-e] git+ssh://git.myproject.org/MyProject#egg=MyProject
+-e git+git@git.myproject.org:MyProject#egg=MyProject
+</pre></div>
+
+
+<p>Passing branch names, a commit hash or a tag name is possible like so:</p>
+<div class="highlight"><pre><span></span>[-e] git://git.myproject.org/MyProject.git@master#egg=MyProject
+[-e] git://git.myproject.org/MyProject.git@v1.0#egg=MyProject
+[-e] git://git.myproject.org/MyProject.git@da39a3ee5e6b4b0d3255bfef95601890afd80709#egg=MyProject
+</pre></div>
+
+
+<p>The "project name" component of the url suffix "egg=<project name>-<version>" is used by pip in its dependency logic to identify the project prior to pip downloading and analyzing the metadata. The optional "version" component of the egg name is not functionally important. It merely provides a human-readable clue as to what version is in use.</p>
+<h3>Subdirectory install</h3>
+<p>For projects where setup.py is not in the root of project, "subdirectory" component is used. Value of "subdirectory" component should be a path starting from root of the project to where setup.py is located.</p>
+<p><code>pip install -e vcs+protocol://repo_url/#egg=pkg&amp;subdirectory=pkg_dir</code></p>
+<h3>Editable and non-editable installs</h3>
+<p>VCS projects can be installed in editable mode (using the --editable option) or not.</p>
+<ul>
+<li>
+<p>For editable installs, the clone location by default is "<venv path>/src/SomeProject" in virtual environments, and "<cwd>/src/SomeProject" for global installs. The --src option can be used to modify this location.</p>
+</li>
+<li>
+<p>For non-editable installs, the project is built locally in a temp dir and then installed normally.</p>
+</li>
+</ul>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="https://skoval00.github.io/python-utilities.html" rel="bookmark"
+                           title="Permalink to Python Utilities">Python Utilities</a></h1>
+                </header>
+
+                <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2016-06-07T16:24:00+03:00">
                 Published: Tue 07 June 2016
@@ -31,15 +84,13 @@
         <address class="vcard author">
                 By                         <a class="url fn" href="https://skoval00.github.io/author/skoval00.html">skoval00</a>
         </address>
-<p>In <a href="https://skoval00.github.io/category/python.html">python</a>.</p>
+<p>In <a href="https://skoval00.github.io/category/howto.html">howto</a>.</p>
 
-</footer><!-- /.post-info --><p>It is possible to process json from command line via python module <em>json.tool</em>.</p>
-<p><code>cat json | python -m json.tool</code></p>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
+</footer><!-- /.post-info -->                <p>It is possible to process json from command line via python module <em>json.tool</em>.</p>
+<p><code>cat json | python -m json.tool</code></p>
+                <a class="readmore" href="https://skoval00.github.io/python-utilities.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
 
             <li><article class="hentry">
                 <header>
@@ -56,7 +107,7 @@
         <address class="vcard author">
                 By                         <a class="url fn" href="https://skoval00.github.io/author/skoval00.html">skoval00</a>
         </address>
-<p>In <a href="https://skoval00.github.io/category/engineering.html">engineering</a>.</p>
+<p>In <a href="https://skoval00.github.io/category/howto.html">howto</a>.</p>
 
 </footer><!-- /.post-info -->                <p>Key points from <a href="http://podoliaka.org/2016/04/10/debugging-cpython-gdb/">post</a> by Roman Podoliaka</p>
 <h2>Prerequisites</h2>
@@ -85,7 +136,7 @@
         <address class="vcard author">
                 By                         <a class="url fn" href="https://skoval00.github.io/author/skoval00.html">skoval00</a>
         </address>
-<p>In <a href="https://skoval00.github.io/category/unix.html">unix</a>.</p>
+<p>In <a href="https://skoval00.github.io/category/howto.html">howto</a>.</p>
 
 </footer><!-- /.post-info -->                <p>It is possible for several programs  fulfilling  the  same  or  similar functions  to  be  installed  on a single system at the same time.  For example, many systems have several  text  editors  installed  at  once.  This gives choice to the users of a system, allowing each to use a different editor ...</p>
                 <a class="readmore" href="https://skoval00.github.io/update-alternatives-in-ubuntu.html">read more</a>
