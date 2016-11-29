@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
         <meta charset="utf-8" />
-        <title>SkoGround - Authors</title>
+        <title>Clone git project with submodules</title>
         <link rel="stylesheet" href="https://skoval00.github.io/theme/css/main.css" />
 
         <!--[if IE]>
@@ -14,17 +14,41 @@
         <header id="banner" class="body">
                 <h1><a href="https://skoval00.github.io/">SkoGround </a></h1>
                 <nav><ul>
-                    <li><a href="https://skoval00.github.io/category/howto.html">howto</a></li>
+                    <li class="active"><a href="https://skoval00.github.io/category/howto.html">howto</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
-
 <section id="content" class="body">
-    <h1>Authors on SkoGround</h1>
-    <ul>
-        <li><a href="https://skoval00.github.io/author/skoval00.html">skoval00</a> (5)</li>
-    </ul>
-</section>
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="https://skoval00.github.io/clone-git-project-with-submodules.html" rel="bookmark"
+           title="Permalink to Clone git project with submodules">Clone git project with submodules</a></h1>
+    </header>
 
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2016-11-29T11:33:00+03:00">
+                Published: Tue 29 November 2016
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="https://skoval00.github.io/author/skoval00.html">skoval00</a>
+        </address>
+<p>In <a href="https://skoval00.github.io/category/howto.html">howto</a>.</p>
+
+</footer><!-- /.post-info -->      <p>Some time ago I decided to store my local configuration files in git. But then I had to deal with the problem. What if I want to store some private employer-related settings in my config files? So I created two git repos: personal on the internet and private on my employers' premises.</p>
+<p>I picked employers' repo as main project and added personal repo as submodule. Since I often forget how to initialize submodules after cloning, I wrote it down here.</p>
+<p>After cloning the project one should issue next commands</p>
+<div class="highlight"><pre><span></span>git submodule init
+git submodule update
+</pre></div>
+
+
+<p>Taken from <a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules#Cloning-a-Project-with-Submodules">Git book</a>.</p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
         <section id="extras" class="body">
                 <div class="blogroll">
                         <h2>blogroll</h2>

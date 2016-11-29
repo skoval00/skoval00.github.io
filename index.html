@@ -20,7 +20,39 @@
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="https://skoval00.github.io/install-python-packages-from-github.html">Install Python packages from Github</a></h1>
+                    <h1 class="entry-title"><a href="https://skoval00.github.io/clone-git-project-with-submodules.html">Clone git project with submodules</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2016-11-29T11:33:00+03:00">
+                Published: Tue 29 November 2016
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="https://skoval00.github.io/author/skoval00.html">skoval00</a>
+        </address>
+<p>In <a href="https://skoval00.github.io/category/howto.html">howto</a>.</p>
+
+</footer><!-- /.post-info --><p>Some time ago I decided to store my local configuration files in git. But then I had to deal with the problem. What if I want to store some private employer-related settings in my config files? So I created two git repos: personal on the internet and private on my employers' premises.</p>
+<p>I picked employers' repo as main project and added personal repo as submodule. Since I often forget how to initialize submodules after cloning, I wrote it down here.</p>
+<p>After cloning the project one should issue next commands</p>
+<div class="highlight"><pre><span></span>git submodule init
+git submodule update
+</pre></div>
+
+
+<p>Taken from <a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules#Cloning-a-Project-with-Submodules">Git book</a>.</p>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="https://skoval00.github.io/install-python-packages-from-github.html" rel="bookmark"
+                           title="Permalink to Install Python packages from Github">Install Python packages from Github</a></h1>
+                </header>
+
+                <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2016-06-25T07:24:00+03:00">
                 Published: Sat 25 June 2016
@@ -31,43 +63,15 @@
         </address>
 <p>In <a href="https://skoval00.github.io/category/howto.html">howto</a>.</p>
 
-</footer><!-- /.post-info --><p>Taken from <a href="https://pip.pypa.io/en/latest/reference/pip_install/#vcs-support">pip documentation</a>.</p>
+</footer><!-- /.post-info -->                <p>Taken from <a href="https://pip.pypa.io/en/latest/reference/pip_install/#vcs-support">pip documentation</a>.</p>
 <p>pip supports installing from Git, Mercurial, Subversion and Bazaar, and detects the type of VCS using url prefixes: "git+", "hg+", "bzr+", "svn+".</p>
 <h2>Git</h2>
 <p>Here are the supported forms:</p>
 <div class="highlight"><pre><span></span>[-e] git+https://github.com/MyAccount/MyProject#egg=MyProject
-[-e] git+git://git.myproject.org/MyProject#egg=MyProject
-[-e] git+ssh://git.myproject.org/MyProject#egg=MyProject
--e git+git@git.myproject.org:MyProject#egg=MyProject
-</pre></div>
-
-
-<p>Passing branch names, a commit hash or a tag name is possible like so:</p>
-<div class="highlight"><pre><span></span>[-e] git://git.myproject.org/MyProject.git@master#egg=MyProject
-[-e] git://git.myproject.org/MyProject.git@v1.0#egg=MyProject
-[-e] git://git.myproject.org/MyProject.git@da39a3ee5e6b4b0d3255bfef95601890afd80709#egg=MyProject
-</pre></div>
-
-
-<p>The "project name" component of the url suffix "egg=<project name>-<version>" is used by pip in its dependency logic to identify the project prior to pip downloading and analyzing the metadata. The optional "version" component of the egg name is not functionally important. It merely provides a human-readable clue as to what version is in use.</p>
-<h3>Subdirectory install</h3>
-<p>For projects where setup.py is not in the root of project, "subdirectory" component is used. Value of "subdirectory" component should be a path starting from root of the project to where setup.py is located.</p>
-<p><code>pip install -e vcs+protocol://repo_url/#egg=pkg&amp;subdirectory=pkg_dir</code></p>
-<h3>Editable and non-editable installs</h3>
-<p>VCS projects can be installed in editable mode (using the --editable option) or not.</p>
-<ul>
-<li>
-<p>For editable installs, the clone location by default is "<venv path>/src/SomeProject" in virtual environments, and "<cwd>/src/SomeProject" for global installs. The --src option can be used to modify this location.</p>
-</li>
-<li>
-<p>For non-editable installs, the project is built locally in a temp dir and then installed normally.</p>
-</li>
-</ul>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
+[-e] git+git://git.myproject.org/MyProject#egg=MyProject ...</pre></div>
+                <a class="readmore" href="https://skoval00.github.io/install-python-packages-from-github.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
 
             <li><article class="hentry">
                 <header>
