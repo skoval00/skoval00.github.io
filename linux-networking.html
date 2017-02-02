@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
         <meta charset="utf-8" />
-        <title>SkoGround</title>
+        <title>Linux networking</title>
         <link rel="stylesheet" href="https://skoval00.github.io/theme/css/main.css" />
 
         <!--[if IE]>
@@ -16,14 +16,49 @@
                 <nav><ul>
                     <li><a href="https://skoval00.github.io/category/howto.html">howto</a></li>
                     <li><a href="https://skoval00.github.io/category/investment.html">investment</a></li>
-                    <li><a href="https://skoval00.github.io/category/unix.html">unix</a></li>
+                    <li class="active"><a href="https://skoval00.github.io/category/unix.html">unix</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
-<ul>
-    <li><a href="https://skoval00.github.io/category/howto.html">howto</a></li>
-    <li><a href="https://skoval00.github.io/category/investment.html">investment</a></li>
-    <li><a href="https://skoval00.github.io/category/unix.html">unix</a></li>
-</ul>
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="https://skoval00.github.io/linux-networking.html" rel="bookmark"
+           title="Permalink to Linux networking">Linux networking</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2016-11-30T11:26:00+03:00">
+                Published: Wed 30 November 2016
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="https://skoval00.github.io/author/skoval00.html">skoval00</a>
+        </address>
+<p>In <a href="https://skoval00.github.io/category/unix.html">unix</a>.</p>
+
+</footer><!-- /.post-info -->      <p>Q: Enable IPv6 routing</p>
+<div class="highlight"><pre><span></span>ip -6 route add {network}/{netmask} dev {interface}
+sysctl net.ipv6.conf.default.forwarding=1
+sysctl net.ipv6.conf.all.forwarding=1
+</pre></div>
+
+
+<p>Q: List network interfaces information</p>
+<div class="highlight"><pre><span></span>ip addr show
+ip -6 addr show dev lo
+</pre></div>
+
+
+<p>Q: Show routing table</p>
+<div class="highlight"><pre><span></span>ip route show
+ip -6 route show
+</pre></div>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
         <section id="extras" class="body">
                 <div class="blogroll">
                         <h2>blogroll</h2>

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
         <meta charset="utf-8" />
-        <title>SkoGround</title>
+        <title>Linux processes</title>
         <link rel="stylesheet" href="https://skoval00.github.io/theme/css/main.css" />
 
         <!--[if IE]>
@@ -16,14 +16,44 @@
                 <nav><ul>
                     <li><a href="https://skoval00.github.io/category/howto.html">howto</a></li>
                     <li><a href="https://skoval00.github.io/category/investment.html">investment</a></li>
-                    <li><a href="https://skoval00.github.io/category/unix.html">unix</a></li>
+                    <li class="active"><a href="https://skoval00.github.io/category/unix.html">unix</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="https://skoval00.github.io/linux-processes.html" rel="bookmark"
+           title="Permalink to Linux processes">Linux processes</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2016-12-01T19:23:00+03:00">
+                Published: Thu 01 December 2016
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="https://skoval00.github.io/author/skoval00.html">skoval00</a>
+        </address>
+<p>In <a href="https://skoval00.github.io/category/unix.html">unix</a>.</p>
+
+</footer><!-- /.post-info -->      <h2>Possible process states</h2>
 <ul>
-    <li><a href="https://skoval00.github.io/category/howto.html">howto</a></li>
-    <li><a href="https://skoval00.github.io/category/investment.html">investment</a></li>
-    <li><a href="https://skoval00.github.io/category/unix.html">unix</a></li>
+<li>D    uninterruptible sleep (usually waiting for disk IO)</li>
+<li>R    running or runnable (on run queue)</li>
+<li>S    interruptible sleep (waiting for an event to complete)</li>
+<li>T    stopped by job control signal</li>
+<li>t    stopped by debugger during the tracing</li>
+<li>W    paging (not valid since the 2.6.xx kernel)</li>
+<li>X    dead (should never be seen)</li>
+<li>Z    defunct ("zombie") process, terminated but not reaped by its parent
+Processes in R, D commit to load average figures</li>
 </ul>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
         <section id="extras" class="body">
                 <div class="blogroll">
                         <h2>blogroll</h2>
